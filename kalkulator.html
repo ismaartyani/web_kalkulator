@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Web Calculator</title>
+	<link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body>
+ <div class="flex-container-column card"> <!-- element kolom Container -->
+	<div class="display">
+		<h1 id="displayNumber">0</h1>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- agar tampilan dapat menyesuaikan dengan beberapa layar yang berbeda. -->
+	</div>
+       <div class="flex-container-row">
+           <div class="button">7</div> <!-- flex item pada row container -->
+           <div class="button">8</div>
+           <div class="button">9</div>
+           <div class="button negative">+/-</div>
+       </div>
+       <div class="flex-container-row"> <!-- element row Container -->
+           <div class="button">4</div>
+           <div class="button">5</div>
+           <div class="button">6</div>
+           <div class="button operator">-</div>
+       </div>
+       <div class="flex-container-row">
+           <div class="button">1</div>
+           <div class="button">2</div>
+           <div class="button">3</div>
+           <div class="button operator">+</div>
+       </div>
+       <div class="flex-container-row">
+           <div class="button clear">CE</div>
+           <div class="button">0</div>
+		    <div class="button equals double">=</div> 
+		   <!-- Agar kontainer terisi penuh, kita buat tombol equals (=) memiliki nilai flex-basis: 50% sehingga tombol tersebut memiliki besar 2 kali dibandingkan dengan tombol yang lainnya. 
+		   Tambahkan nilai class “double” pada tombol tersebut. -->
+       </div>
+</div>
+<!-- untuk menyimpan storage web -->
+	<div class="history card">
+      <h2>Riwayat Perhitungan</h2>
+       <table>
+           <thead>
+               <tr>
+                   <th>Angka Pertama</th>
+                   <th>Operator</th>
+                   <th>Angka Kedua</th>
+                   <th>Hasil</th>
+               </tr>
+           </thead>
+           <tbody id="historyList"></tbody>
+       </table>
+   </div>
+<script src="assets/kalkulator.js"></script>
+<script src="assets/storage.js"></script>
+</body>
+</html>
